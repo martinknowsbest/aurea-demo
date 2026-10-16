@@ -69,8 +69,8 @@
 <div class="nav" id="nav">
   <div class="logo">AUREA</div>
   <div class="links">
-    <span data-p="0.20">INGREDIENTS</span>
-    <span data-p="0.46">THE STEEP</span>
+    <span data-p="0.18">INGREDIENTS</span>
+    <span data-p="0.44">THE STEEP</span>
     <span data-p="0.65">THE BREW</span>
     <span data-p="0.86">THE POUR</span>
     <span data-p="1">ORDER</span>
@@ -85,9 +85,9 @@
 </div></div>
 
 <div class="chap c-right" id="c1"><div class="txt">
-  <div class="eyebrow">01 - The Unwrapping</div>
-  <h2>Nature,<br><span class="it">unwrapped.</span></h2>
-  <div class="body">The sachet opens. Leaves tumble in slow motion through a shaft of golden light, falling into still water.</div>
+  <div class="eyebrow">01 - The Unveiling</div>
+  <h2>Nature,<br><span class="it">lifted.</span></h2>
+  <div class="body">The glass lid rises off the pot. Leaves tumble in slow motion through a shaft of golden light, falling into still water.</div>
 </div></div>
 
 <div class="chap c-left" id="c2"><div class="txt">
@@ -99,7 +99,7 @@
 <div class="chap c-right" id="c3"><div class="txt">
   <div class="eyebrow">03 - The Brew</div>
   <h2>A colour<br>of <span class="it">gold.</span></h2>
-  <div class="body">Slowly, the water turns to liquid amber. Every leaf has spoken. Steam rises from the spout.</div>
+  <div class="body">Slowly, the water turns to liquid amber. A thin golden stream pours into the glass, wrapped in steam.</div>
 </div></div>
 
 <div class="chap c-center" id="c4"><div class="txt" style="pointer-events:auto">
@@ -118,7 +118,7 @@
 <div id="load"><div class="t">AUREA</div><div class="pc" id="pc">0%</div></div>
 
 <script>
-const N = 56;
+const N = 192;
 const cvs = document.getElementById('cv'), ctx = cvs.getContext('2d');
 const frames = [];
 let loaded = 0, ready = false, cur = -1;
@@ -165,16 +165,16 @@ function draw(n){
   const w = iw*s, h = ih*s;
   ctx.clearRect(0,0,cw,ch);
   ctx.drawImage(img, (cw-w)/2, (ch-h)/2, w, h);
-  hud.textContent = 'FRAME ' + String(n).padStart(2,'0') + ' / ' + N;
+  hud.textContent = 'FRAME ' + String(n).padStart(3,'0') + ' / ' + N;
 }
 
 const bar = document.getElementById('bar'), scue = document.getElementById('scue');
 const chaps = [
-  {el:document.getElementById('c0'), s:0.00, e:0.16},
-  {el:document.getElementById('c1'), s:0.18, e:0.34},
-  {el:document.getElementById('c2'), s:0.40, e:0.56},
-  {el:document.getElementById('c3'), s:0.60, e:0.76},
-  {el:document.getElementById('c4'), s:0.84, e:1.01}
+  {el:document.getElementById('c0'), s:0.00, e:0.10},
+  {el:document.getElementById('c1'), s:0.13, e:0.30},
+  {el:document.getElementById('c2'), s:0.36, e:0.54},
+  {el:document.getElementById('c3'), s:0.60, e:0.78},
+  {el:document.getElementById('c4'), s:0.85, e:1.01}
 ];
 
 let ticking = false;
